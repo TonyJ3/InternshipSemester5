@@ -1,0 +1,717 @@
+{
+	"info": {
+		"_postman_id": "0ecb7a75-82f2-4c5f-a65c-b7ef9e4e32e2",
+		"name": "EnableX Video",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31313262"
+	},
+	"item": [
+		{
+			"name": "Get rooms",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create permanent room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test 6\",\r\n  \"owner_ref\": \"123\",\r\n  \"settings\": {\r\n    \"description\": \"Meeting with Bob\",\r\n    \"mode\": \"group\",\r\n    \"scheduled\": false,\r\n    \"adhoc\": false,\r\n    \"duration\": 30,\r\n    \"moderators\": \"1\",\r\n    \"participants\": \"1\",\r\n    \"quality\": \"SD\",\r\n    \"auto_recording\": false,\r\n    \"knock\": true,\r\n    \"wait_for_moderator\": true,\r\n    \"role_based_recording\": {\r\n        \"moderator\": \"audiovideo\",\r\n        \"participant\": \"audiovideo\"\r\n    }\r\n  },\r\n  \"sip\": {\r\n    \"enabled\": false\r\n  },\r\n  \"data\": {\r\n    \"custom_key\": \"\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create schedule room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test 7\",\r\n  \"owner_ref\": \"123\",\r\n  \"settings\": {\r\n    \"description\": \"Meeting with Jimmy\",\r\n    \"mode\": \"group\",\r\n    \"scheduled\": true,\r\n    \"adhoc\": false,\r\n    \"duration\": 30,\r\n    \"scheduled_time\": \"2023-11-23 13:30:00\",\r\n    \"moderators\": \"1\",\r\n    \"participants\": \"1\",\r\n    \"quality\": \"SD\",\r\n    \"auto_recording\": false,\r\n    \"knock\": true,\r\n    \"wait_for_moderator\": true,\r\n    \"role_based_recording\": {\r\n        \"moderator\": \"audiovideo\",\r\n        \"participant\": \"audiovideo\"\r\n    }\r\n  },\r\n  \"sip\": {\r\n    \"enabled\": false\r\n  },\r\n  \"data\": {\r\n    \"custom_key\": \"\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create adhoc room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test 8\",\r\n  \"owner_ref\": \"123\",\r\n  \"settings\": {\r\n    \"description\": \"Meeting with Jimmy\",\r\n    \"mode\": \"group\",\r\n    \"scheduled\": false,\r\n    \"adhoc\": true,\r\n    \"duration\": 30,\r\n    \"moderators\": \"1\",\r\n    \"participants\": \"1\",\r\n    \"quality\": \"SD\",\r\n    \"auto_recording\": false,\r\n    \"knock\": true,\r\n    \"wait_for_moderator\": true,\r\n    \"role_based_recording\": {\r\n        \"moderator\": \"audiovideo\",\r\n        \"participant\": \"audiovideo\"\r\n    }\r\n  },\r\n  \"sip\": {\r\n    \"enabled\": false\r\n  },\r\n  \"data\": {\r\n    \"custom_key\": \"\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get room by id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms/655cec215d5a0d83426b957f",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms",
+						"655cec215d5a0d83426b957f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Change name room 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms/655cec215d5a0d83426b957f",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms",
+						"655cec215d5a0d83426b957f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms/655cf378dd58263130e44aee",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms",
+						"655cf378dd58263130e44aee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get users in room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms/655cefa00477aefd0885d8c1/users",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms",
+						"655cefa00477aefd0885d8c1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create token to join room by id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Toby\",\r\n    \"role\": \"participant\",\r\n    \"user_ref\": \"124\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.enablex.io/v2/rooms/655ce9c24b5de9111bc10922/tokens",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"v2",
+						"rooms",
+						"655ce9c24b5de9111bc10922",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST LINK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://social-care.yourvideo.live/host/NjU2NWZjNTEwYTg2ZmM1NzY0ZTZmZTg2LTY1NWJiOGM2MTcwNzNhZDM5ODBkODZlMw==?name=Jake&video=yes&audio=yes",
+					"protocol": "https",
+					"host": [
+						"social-care",
+						"yourvideo",
+						"live"
+					],
+					"path": [
+						"host",
+						"NjU2NWZjNTEwYTg2ZmM1NzY0ZTZmZTg2LTY1NWJiOGM2MTcwNzNhZDM5ODBkODZlMw=="
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Jake"
+						},
+						{
+							"key": "video",
+							"value": "yes"
+						},
+						{
+							"key": "audio",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get CDR for specific period",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/cdr/period/2023-11-20/2023-11-23",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"cdr",
+						"period",
+						"2023-11-20",
+						"2023-11-23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get CDR for specific room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/cdr/room/655ce9c24b5de9111bc10922",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"cdr",
+						"room",
+						"655ce9c24b5de9111bc10922"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get CDR room and period",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/cdr/room-period/655ce9c24b5de9111bc10922/2023-11-20/2023-11-23",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"cdr",
+						"room-period",
+						"655ce9c24b5de9111bc10922",
+						"2023-11-20",
+						"2023-11-23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get CDR for conference number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/cdr/conf/{conf-num}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"cdr",
+						"conf",
+						"{conf-num}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get archive for a period",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/archive/period/2023-11-20/2023-11-21",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"archive",
+						"period",
+						"2023-11-20",
+						"2023-11-21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get archive for room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/archive/room/655ce9c24b5de9111bc10922",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"archive",
+						"room",
+						"655ce9c24b5de9111bc10922"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get archive room and period",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ba6aRa2y5uJuey2aByXaRy3eSabaguBa5uyy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "65565cb1b8dea4bba2021503",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/archive/room-period/655ce9c24b5de9111bc10922/2023-11-20/2023-11-21",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"archive",
+						"room-period",
+						"655ce9c24b5de9111bc10922",
+						"2023-11-20",
+						"2023-11-21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get archive by conference number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/archive/conf/{conf-num}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"archive",
+						"conf",
+						"{conf-num}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "9d5f9dc5-af6e-4e08-959d-be55e51b6dff",
+		"name": "EnableX Low code",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31313262"
+	},
+	"item": [
+		{
+			"name": "Create adhoc room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "esaYe9yBu4yDyYumegy4yza2y9ahateXuMeY",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "655bb8c617073ad3980d86e3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test\",\r\n  \"owner_ref\": \"tony.itp.test@gmail.com\",\r\n  \"settings\": {\r\n    \"description\": \"Test room meeting 7\",\r\n    \"mode\": \"group\",\r\n    \"scheduled\": false,\r\n    \"adhoc\": true,\r\n    \"moderators\": \"3\",\r\n    \"participants\": \"2\",\r\n    \"duration\": 10,\r\n    \"max_active_talkers\": 5\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get rooms",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "esaYe9yBu4yDyYumegy4yza2y9ahateXuMeY",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "655bb8c617073ad3980d86e3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "esaYe9yBu4yDyYumegy4yza2y9ahateXuMeY",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "655bb8c617073ad3980d86e3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms/6578a14f6774cc6d308749ca",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms",
+						"6578a14f6774cc6d308749ca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create schedule room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "esaYe9yBu4yDyYumegy4yza2y9ahateXuMeY",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "655bb8c617073ad3980d86e3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test Room 4\",\r\n  \"owner_ref\": \"tony.itp.test@gmail.com\",\r\n  \"settings\": {\r\n    \"description\": \"Test room meeting 4\",\r\n    \"mode\": \"group\",\r\n    \"scheduled\": true,\r\n    \"adhoc\": false,\r\n    \"scheduled_time\": \"2023-12-11 14:30:00\",\r\n    \"duration\": 10,\r\n    \"moderators\": \"1\",\r\n    \"participants\": \"1\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create room",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "esaYe9yBu4yDyYumegy4yza2y9ahateXuMeY",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "655bb8c617073ad3980d86e3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test 222\",\r\n  \"owner_ref\": \"tony.itp.test@gmail.com\",\r\n  \"settings\": {\r\n    \"description\": \"Meeting\",\r\n    \"mode\": \"group\",\r\n    \"scheduled\": false,\r\n    \"adhoc\": false,\r\n    \"moderators\": \"1\",\r\n    \"participants\": \"1\",\r\n    \"duration\": 10,\r\n    \"quality\": \"\",\r\n    \"knock\": true,\r\n    \"wait_for_moderator\": true\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get room by id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "esaYe9yBu4yDyYumegy4yza2y9ahateXuMeY",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "655bb8c617073ad3980d86e3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.enablex.io/video/v2/rooms/6577673a6774cc6d308744e0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enablex",
+						"io"
+					],
+					"path": [
+						"video",
+						"v2",
+						"rooms",
+						"6577673a6774cc6d308744e0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
